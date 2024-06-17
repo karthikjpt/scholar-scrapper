@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CSV File Upload</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles/upload.css') }}">
+</head>
+<body>
+    <div class="content-container">
+        <div class="image-container">
+        </div>
+        <div class="upload-form">
+            <h1>Upload workers list as CSV File</h1>
+<br>
+Incentive for above 24+ days worked;
+<br>
+<br>
+special incentive for 'SPINNING', 'KNITING OPERATOR' who worked 25+ days
+<br>
+<br>
+            <form method="POST" action="/uploadfile" enctype="multipart/form-data">
+                <input type="file" name="file">
+                <input type="submit" value="Upload">
+            </form>
+        </div>
+    </div>
+</body>
+</html>
+

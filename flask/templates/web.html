@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Google Scholar Scraper</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        h1 {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        form {
+            width: 60%;
+            margin: 20px auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        input[type="text"],
+        input[type="number"],
+        input[type="submit"] {
+            width: calc(100% - 20px);
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+
+        input[type="submit"] {
+            background-color: #4caf50;
+            color: white;
+            cursor: pointer;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+    </style>
+    <script>
+        function setDefault() {
+            var pageLimit = document.getElementsByName('page_limit')[0];
+            if (pageLimit.value === '') {
+                pageLimit.value = '1';
+            }
+        }
+    </script>
+</head>
+<body>
+
+    <h1>Google Scholar Scraper</h1>
+
+    <form action="/web" method="post" onsubmit="setDefault()">
+        <input type="text" name="search_query" placeholder="Enter your query">
+        <input type="number" name="page_limit" placeholder="Number of pages" min="1">
+        <input type="submit" value="Search">
+    </form>
+</body>
+</html>
+
